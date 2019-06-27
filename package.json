@@ -10,6 +10,7 @@
     "start": "node src/index"
   },
   "author": "jf908",
+  "license": "MIT",
   "dependencies": {
     "arg": "^4.1.0",
     "fast-glob": "^3.0.2",
