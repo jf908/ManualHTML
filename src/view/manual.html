@@ -1,0 +1,48 @@
+<div id="app">
+  <div class="title">
+    <h2>{{ man.program }}</h2>
+    <span class="version">{{ man.version }}</span>
+    <div class="date">{{ man.date }}</div>
+  </div>
+  <p>{{ man.longDescription || man.description }}</p>
+  <div v-if="man.examples">
+    <h3>Examples</h3>
+    <div v-for="example in man.examples">
+      <div class="code-title">
+        <pre>{{ example.input + (example.output ? `\n> ${example.output}` : '') }}</pre>
+      </div>
+      <p v-if="example.description">{{ example.description }}</p>
+    </div>
+  </div>
+  <h3>Arguments</h3>
+  <div class="arg" v-for="arg in man.args">
+    <div class="code-title">
+        <code v-if="arg.short">-{{ arg.short }}</code>
+        <code v-if="arg.long">--{{ arg.long }}</code>
+    </div>
+    <p>{{ arg.help }}</p>
+  </div>
+  <div v-if="man.author">
+    <h3>Author</h3>
+    <p>{{ man.author }}</p>
+  </div>
+  <div v-if="man.bugs">
+    <h3>Bugs</h3>
+    <p>{{ man.bugs }}</p>
+  </div>
+  <div v-if="man.license">
+    <h3>License</h3>
+    <p>{{ man.license }}</p>
+  </div>
+  <script v-if="javascript">
+    var el = document.createElement('div');
+    var htmlClassList = document.documentElement.classList;
+    el.textContent = htmlClassList.contains('theme-dark') ? 'Dark' : 'Light';
+    el.onclick = function() {
+      var bool = htmlClassList.toggle('theme-dark');
+      el.textContent = bool ? 'Dark' : 'Light';
+    }
+    el.classList.add('toggle');
+    document.body.appendChild(el);
+  </script>
+</div>

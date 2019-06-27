@@ -1,0 +1,9 @@
+# Specific
+temp
+dist
+man
+examples
+
+# General
+.DS_Store
+node_modules

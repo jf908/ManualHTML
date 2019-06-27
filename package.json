@@ -1,0 +1,25 @@
+{
+  "name": "manualhtml",
+  "version": "0.1.0",
+  "description": "A web manual generator for command-line programs.",
+  "main": "src/index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "build": "node scripts/build",
+    "build:all": "node scripts/build --all",
+    "start": "node src/index"
+  },
+  "author": "jf908",
+  "dependencies": {
+    "arg": "^4.1.0",
+    "fast-glob": "^3.0.2",
+    "vue": "^2.6.10",
+    "vue-server-renderer": "^2.6.10"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0"
+  },
+  "pkg": {
+    "assets": "src/view/**/*"
+  }
+}

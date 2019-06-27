@@ -1,0 +1,34 @@
+{
+  "program": "manualhtml",
+  "description": "A web manual generator for command-line programs.",
+  "license": "MIT License",
+  "version": "0.1.0",
+  "date": "June 2019",
+  "author": "jf908",
+  "examples": [
+    {
+      "input": "manualhtml manualhtml.json",
+      "description": "Outputs to man/manualhtml.html"
+    }
+  ],
+  "args": [
+    {
+      "long": "version",
+      "short": "v",
+      "help": "Output version information and exit."
+    },
+    {
+      "long": "out",
+      "short": "o",
+      "help": "Output directory, defaults to man."
+    },
+    {
+      "long": "dark",
+      "help": "Output pages in dark mode by default."
+    },
+    {
+      "long": "nojs",
+      "help": "Excludes any JavaScript from the output."
+    }
+  ]
+}
