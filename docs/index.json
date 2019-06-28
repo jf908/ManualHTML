@@ -1,8 +1,8 @@
 {
   "program": "manualhtml",
-  "description": "A web manual generator for command-line programs.",
+  "description": "A web manual generator for command-line programs. Source at https://github.com/jf908/ManualHTML.",
   "license": "MIT License",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "date": "June 2019",
   "author": "jf908",
   "examples": [
@@ -11,6 +11,7 @@
       "description": "Outputs to man/manualhtml.html"
     }
   ],
+  "bugs": "Report bugs to https://github.com/jf908/ManualHTML/issues.",
   "args": [
     {
       "long": "version",
@@ -29,6 +30,10 @@
     {
       "long": "nojs",
       "help": "Excludes any JavaScript from the output."
+    },
+    {
+      "long": "verbose",
+      "help": "Outputs auxiliary information to the console."
     }
   ]
 }

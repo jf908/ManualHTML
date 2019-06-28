@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --background: #fff;
+    --color: black;
+    --code-background: #63646e;
+    --code-color: #fff;
+
+    --font-size: 16px;
+    --small-size: 0.875em;
+  }
+
+  .theme-dark {
+    --background: #222;
+    --color: white;
+    --code-background: #333;
+    --code-color: #fff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--color);
+    font-family: "Noto Sans", sans-serif;
+    font-size: var(--font-size);
+    line-height: 1.5;
+  }
+
+  #app {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: auto;
+  }
+
+  h1, h2, h3 {
+    margin: 1.5em 0;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-top: 3em;
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--code-background);
+  }
+
+  code, pre {
+    font-family: "Roboto Mono", monospace;
+    background: var(--code-background);
+    color: var(--code-color);
+    font-size: var(--small-size);
+    padding: .2em .5em;
+    border-radius: 4px;
+  }
+
+  pre {
+    display: inline-block;
+  }
+
+  .title {
+    margin: 1.5em 0;
+  }
+  .title h2 {
+    margin: 0;
+    font-size: 2em;
+  }
+  .title .date {
+    float: right;
+  }
+  .title .date, .title .version {
+    font-size: var(--small-size);
+  }
+
+  .code-title {
+    margin-bottom: .5em;
+  }
+
+  .toggle {
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  </style>
+  <style>
+    body { white-space: pre-line; }
+  </style>
+  <title>Man Page</title>
+</head>
+<body>
+  <div id="app" data-server-rendered="true"><div class="title"><h2>manualhtml</h2> <span class="version">0.1.1</span> <div class="date">June 2019</div></div> <p>A web manual generator for command-line programs. Source at https://github.com/jf908/ManualHTML.</p> <div><h3>Examples</h3> <div><div class="code-title"><pre>manualhtml manualhtml.json</pre></div> <p>Outputs to man/manualhtml.html</p></div></div> <h3>Arguments</h3> <div class="arg"><div class="code-title"><code>-v</code> <code>--version</code></div> <p>Output version information and exit.</p></div><div class="arg"><div class="code-title"><code>-o</code> <code>--out</code></div> <p>Output directory, defaults to man.</p></div><div class="arg"><div class="code-title"><!----> <code>--dark</code></div> <p>Output pages in dark mode by default.</p></div><div class="arg"><div class="code-title"><!----> <code>--nojs</code></div> <p>Excludes any JavaScript from the output.</p></div><div class="arg"><div class="code-title"><!----> <code>--verbose</code></div> <p>Outputs auxiliary information to the console.</p></div> <div><h3>Author</h3> <p>jf908</p></div> <div><h3>Bugs</h3> <p>Report bugs to https://github.com/jf908/ManualHTML/issues.</p></div> <div><h3>License</h3> <p>MIT License</p></div> <script>
+    var el = document.createElement('div');
+    var htmlClassList = document.documentElement.classList;
+    el.textContent = htmlClassList.contains('theme-dark') ? 'Dark' : 'Light';
+    el.onclick = function() {
+      var bool = htmlClassList.toggle('theme-dark');
+      el.textContent = bool ? 'Dark' : 'Light';
+    }
+    el.classList.add('toggle');
+    document.body.appendChild(el);
+  </script></div>
+</body>
+</html>

@@ -1,12 +1,13 @@
 {
   "name": "manualhtml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A web manual generator for command-line programs.",
   "main": "src/index.js",
   "bin": "src/index.js",
   "scripts": {
     "build": "node scripts/build",
     "build:all": "node scripts/build --all",
+    "docs": "node scripts/docs",
     "start": "node src/index"
   },
   "author": "jf908",
@@ -22,5 +23,12 @@
   },
   "pkg": {
     "assets": "src/view/**/*"
+  },
+  "bugs": {
+    "url": "https://github.com/jf908/ManualHTML/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jf908/ManualHTML.git"
   }
 }
